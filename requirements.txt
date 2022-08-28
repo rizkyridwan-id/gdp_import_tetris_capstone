@@ -1,3 +1,4 @@
 pycountry
 altair
 seaborn
+numerize
