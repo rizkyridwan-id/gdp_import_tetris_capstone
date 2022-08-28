@@ -71,7 +71,7 @@ def get_chart(data):
 # endregion
 
 # region (page config)
-padding_top = 0
+padding_top = 2.2
 
 st.markdown(f"""
     <style>
@@ -169,6 +169,7 @@ for key in dict_type:
 
 var = pd_merged.loc[:, ["year", "agri_value", "industry_value"]]
 df2 = pd.melt(var.reset_index(), id_vars='year',value_vars=['agri_value','industry_value'])
+print(df2)
 
 chart = get_chart(df2)
 st.altair_chart(
